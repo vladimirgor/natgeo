@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>NatGeo</title>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <!-- jquery -->
+    <script language="javascript" src="jquery-1.11.3.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+
+    <script language="javascript" src="js/bootstrap.min.js"></script>
+<!--
+    <script type="text/javascript">
+        jQuery(document).ready(function(){
+            jQuery("input").focus(
+            function(){
+                this.blur();
+            });
+        });
+    </script>
+-->
+    <!-- My CSS -->
+    <link rel = "stylesheet" href = "css/styles.css" type= "text/css"/>
+</head>
+
+<body>
+    <div class = "container container_width">
+
+        <!-- logo, search, sign up, login   -->
+
+        <div class = "row">
+
+            <!-- logo -->
+            <div class = "padleft padright col-md-2 logo"><img src="images/NationalGeographic.png"></div>
+
+            <!-- search -->
+            <div class = "padright padleft search_box col-md-7">
+                <form name = "search" action="php_search.php" method="post" class="form-inline">
+                    <div class="form-group form_search">
+                        <label class=" sr-only" for="search_id">Search
+                        </label>
+                        <div class="input-group">
+                            <div class="magnif input-group-addon">
+                                <span class = "glyphicon glyphicon-search header_search"></span>
+                            </div>
+                            <input type="text" size = "52" class="form-control" id="search_id" name = "Search"
+                                   placeholder="Search">
+                            <div class="magnif input-group-addon">
+                                <img src="images/border_search.png">
+                                <div class="btn-group">
+                                    <button type = "button" class="btn  dropdown-toggle btn_search"
+                                            data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                        <i class = "all_cat">All categories</i>
+                                        <span class="glyphicon glyphicon-triangle-bottom caret_style">
+                                        </span>
+                                    </button>
+
+                                    <div class=" row dropdown-menu dropdown-menu-left d_menu">
+
+                                        <div class = "col-md-12 select_all">
+                                            <input type = "checkbox" name = "All"> Select all categories to search
+                                        </div>
+
+                                        <div class = "row">
+                                            <div class = "col-md-4 d_menu_col">
+                                                <p class = "col1"><input type = "checkbox"  name = "Vid"
+                                                                         class = "check_box">
+                                                    Videos</p>
+                                                <p class = "col"><input type = "checkbox" name = "Phot"
+                                                                        class = "check_box"> Photography</p>
+                                                <p class = "col1"><input type = "checkbox"  name = "Anim"
+                                                                         class = "check_box"> Animals</p>
+                                                <p class = "col"><input type = "checkbox" name = "Gam"
+                                                                        class = "check_box"> Games</p>
+                                            </div>
+                                            <div class = "col-md-4 d_menu_col1">
+                                                <p class = "col1"><input type = "checkbox"  name = "Env"
+                                                                         class = "check_box"> Environment</p>
+                                                <p class = "col"><input type = "checkbox" name = "Trav"
+                                                                        class = "check_box"> Travel</p>
+                                                <p class = "col1"><input type = "checkbox"  name = "Kid"
+                                                                         class = "check_box"> Kids</p>
+                                                <p class = "col"><input type = "checkbox"  name = "Adv"
+                                                                        class = "check_box"> Adventurer</p>
+                                            </div>
+                                            <div class = "col-md-4 d_menu_col1">
+                                                <p class = "col1"><input type = "checkbox"  name = "Tel"
+                                                                         class = "check_box"> Television</p>
+                                                <p class = "col"><input type = "checkbox" name = "App"
+                                                                        class = "check_box"> Apps</p>
+                                                <p class = "col1"><input type = "checkbox" name = "Ev"
+                                                                         class = "check_box"> Events</p>
+                                                <p class = "col"><input type = "checkbox" name="Trip"
+                                                                        class = "check_box"> Trips</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <img src="images/border_search.png">
+                                <button class = "arrow_box" type="submit">
+                                    <span class="glyphicon glyphicon-circle-arrow-right arrow_style">
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- sign up, login -->
+            <div class = " users padleft padright col-md-4">
+                <div class = "row">
+                    <div class = "col-md-5">
+                        <a href = "#roma">
+                            <div class = "sign_up_box">
+                                <span class = "glyphicon glyphicon-user sign_up_icon"></span>
+                                <p class ="sign_up_title">Sign Up</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class = "padleft padright col-md-2">
+                        <img class = "brdr_users" src="images/border_search.png">
+                    </div>
+                    <div class = "col-md-5">
+                        <a href = "#">
+                            <div class = "login_box">
+                            <span class = "glyphicon glyphicon-log-in login_icon"></span>
+                            <p class ="login_title">Login</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- main menu bar  -->
+
+        <div class = "row">
+            <div class = " padleft bar_menu col-md-12"></div>
+        </div>
+
+        <!-- main menu -->
+
+        <div class = "row">
+            <div class = "padleft col-md-12">
+                <ul class = "top_menu">
+                    <li>
+                        <a class = "top_menu_a" href = "#">
+                            <div class = "top_menu_home">
+                                <span class = "glyphicon glyphicon-home top_menu_icon">
+                                </span>
+                                <p class ="top_menu_title">HOME</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class = "top_menu_a" href = "#">
+                            <div class = "top_menu_photo">
+                                <span class = "glyphicon glyphicon-camera top_menu_icon
+                                    photo_icon">
+                                </span>
+                                <p class ="top_menu_title">Photography</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class = "top_menu_a" href = "#">
+                            <div class = "top_menu_video">
+                                <span class = "glyphicon glyphicon-facetime-video top_menu_icon
+                                    video_icon">
+                                </span>
+                                <p class ="top_menu_title">Video</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class = "top_menu_a" href = "#">
+                            <div class = "top_menu_envir">
+                                <span class = "glyphicon glyphicon-refresh top_menu_icon
+                                    envir_icon">
+                                </span>
+                                <p class ="top_menu_title">Environment</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class = "top_menu_a" href = "#">
+                            <div class = "top_menu_trav">
+                                <span class = "glyphicon glyphicon-plane top_menu_icon
+                                    trav_icon">
+                                </span>
+                                <p class ="top_menu_title">Travel</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class = "top_menu_a" href = "#">
+                            <div class = "top_menu_adven">
+                                <span class = "glyphicon glyphicon-fire top_menu_icon
+                                    adven_icon">
+                                </span>
+                                <p class ="top_menu_title">Adventure</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class = "top_menu_a" href = "#">
+                            <div class = "top_menu_telev">
+                                <span class = "glyphicon glyphicon-film top_menu_icon
+                                    tele_icon">
+                                </span>
+                                <p class ="top_menu_title">Television</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class = "top_menu_a" href = "#">
+                            <div class = "top_menu_kids">
+                                <span class = "glyphicon glyphicon-baby-formula top_menu_icon
+                                    kids_icon">
+                                </span>
+                                <p class ="top_menu_title">Kids</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- main content -->
+
+        <div class = "row">
+
+            <!-- content left box -->
+            <div class = "padleft col-md-8">
+
+                <div class = "row">
+
+                    <!-- sub menu -->
+                    <div class = "col-md-3">
+                        <div class = "row">
+                            <div class = "col-md-6">
+                                <a class = "sub_menu_a" href="#" >
+                                    <div class = "sub_menu_box margin_right margin_bottom">
+                                        <span class = "glyphicon glyphicon-eye-open sub_menu_icon">
+                                        </span>
+                                        <p class ="sub_menu_title">Daily News</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class = "col-md-6 padleft padright">
+                                <a class = "sub_menu_a" href="#" >
+                                    <div class = "sub_menu_box margin_bottom">
+                                        <span class = "glyphicon glyphicon-list-alt sub_menu_icon">
+                                        </span>
+                                        <p class ="sub_menu_title">Magazine</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class = "row">
+                            <div class = "col-md-6">
+                                <a class = "sub_menu_a" href="#" >
+                                    <div class = "sub_menu_box margin_right margin_bottom">
+                                        <span class = "glyphicon glyphicon-map-marker sub_menu_icon">
+                                        </span>
+                                        <p class ="sub_menu_title">Maps</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class = "col-md-6 padleft padright">
+                                <a class = "sub_menu_a" href="#" >
+                                    <div class = "sub_menu_box margin_bottom">
+                                        <span class = "glyphicon glyphicon-book sub_menu_icon">
+                                        </span>
+                                        <p class ="sub_menu_title">Science</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class = "row">
+                            <div class = "col-md-6">
+                                <a class = "sub_menu_a" href="#" >
+                                    <div class = "sub_menu_box margin_right margin_bottom">
+                                        <span class = "glyphicon glyphicon-education sub_menu_icon">
+                                        </span>
+                                        <p class ="sub_menu_title">Education</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class = "col-md-6 padleft padright">
+                                <a class = "sub_menu_a" href="#" >
+                                    <div class = "sub_menu_box margin_bottom">
+                                        <span class = "glyphicon glyphicon-flag sub_menu_icon">
+                                        </span>
+                                        <p class ="sub_menu_title">Games</p>
+                                    </div>
+                                 </a>
+                            </div>
+                        </div>
+                        <div class = "row">
+                            <div class = "col-md-6">
+                                <a class = "sub_menu_a" href="#" >
+                                    <div class = "sub_menu_box margin_right margin_bottom">
+                                        <span class = "glyphicon glyphicon-calendar sub_menu_icon">
+                                        </span>
+                                        <p class ="sub_menu_title">Events</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class = "col-md-6 padleft padright">
+                                <a class = "sub_menu_a" href="#" >
+                                    <div class = "sub_menu_box margin_bottom">
+                                        <span class = "glyphicon glyphicon-comment sub_menu_icon">
+                                        </span>
+                                        <p class ="sub_menu_title">Blogs</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class = "row">
+                            <div class = "col-md-6">
+                                <a class = "sub_menu_a" href="#" >
+                                    <div class = "sub_menu_box margin_right">
+                                        <span class = "glyphicon glyphicon-globe sub_menu_icon">
+                                        </span>
+                                        <p class ="sub_menu_title">Explorers</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class = "col-md-6 padleft padright">
+                                <a class = "sub_menu_a" href="#" >
+                                    <div class = "sub_menu_box">
+                                        <span class = "glyphicon glyphicon-plane sub_menu_icon">
+                                        </span>
+                                        <p class ="sub_menu_title">Trips</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- sub menu separator -->
+                    <div class = "col-md-1 padright padleft sub_menu_separator">
+                        <img src="images/sub_menu_separator.png">
+                    </div>
+
+                    <!-- filter slider latest news-->
+                    <div class = "padleft padright col-md-8 ">
+                        <div class = "row filter">
+                            <a href="#">
+                                <div class = "col-md-2 filter_box_hom">
+                                    <span class = "filter_title">HOME</span>
+                                    <p class = "filter_arrow filter_arrow_hom"><span class = "glyphicon glyphicon-triangle-bottom"></span></p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class = "col-md-2 filter_box_anim">
+                                    <span class = "filter_title">Animals</span>
+                                    <p class = "filter_arrow filter_arrow_anim"><span class = "glyphicon glyphicon-triangle-bottom"></span></p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class = "col-md-2 filter_box_anc">
+                                    <span class = "filter_title">Ancient</span>
+                                    <p class = " filter_arrow filter_arrow_anc"><span class = "glyphicon glyphicon-triangle-bottom"></span></p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class = "col-md-2 filter_box_ener">
+                                    <span class = "filter_title">Energy</span>
+                                    <p class = "filter_arrow filter_arrow_ener"><span class = "glyphicon glyphicon-triangle-bottom"></span></p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class = "col-md-2 filter_box_env">
+                                    <span class = "filter_title">Environment</span>
+                                    <p class = "filter_arrow filter_arrow_env"><span class = "glyphicon glyphicon-triangle-bottom"></span></p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class = "col-md-2 padright filter_box_trav">
+                                    <span class = "filter_title">Travel</span>
+                                    <p class = "filter_arrow filter_arrow_trav"><span class = "glyphicon glyphicon-triangle-bottom"></span></p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class = "row">
+                            <div class = "col-md-12 chita_cubs_box padright">
+                                <div id="carousel" class="carousel slide " data-ride="carousel">
+                                    <!-- Indicators -->
+                                    <ol class="carousel-indicators indicator">
+                                        <li data-target="#carousel" data-slide-to="0" class="active">
+                                            <p class = "slide_number">1</p>
+                                        </li>
+                                        <li data-target="#carousel" data-slide-to="1">
+                                            <p class = "slide_number">2</p></li>
+                                        <li data-target="#carousel" data-slide-to="2">
+                                            <p class = "slide_number">3</p></li>
+                                    </ol>
+
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner inner_box" role="listbox">
+                                        <div class="item active">
+                                            <img class = "chita_cubs_pic " src="images/chita_cubs.jpg" alt="chita">
+                                            <div class="carousel-caption slider_text_box">
+                                                <span class = "slider_header_text" >
+                                                    <p class = "slider_header">1.Chita Cubs Playing</p>
+                                                    <p class = "slider_text">African chita cubs play in the grass in the
+                                                    Okavango Delta</p>
+                                                </span>
+                                                <span class = "glyphicon glyphicon-pause pause"></span>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <img class = "chita_cubs_pic " src="images/chita_cubs.jpg" alt="chita">
+                                            <div class="carousel-caption slider_text_box">
+                                                <span class = "slider_header_text" >
+                                                    <p class = "slider_header">2.Chita Cubs Playing</p>
+                                                    <p class = "slider_text">African chita cubs play in the grass in the
+                                                        Okavango Delta</p>
+                                                </span>
+                                                <span class = "glyphicon glyphicon-pause pause"></span>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <img class = "chita_cubs_pic " src="images/chita_cubs.jpg" alt="chita">
+                                            <div class="carousel-caption slider_text_box">
+                                                <span class = "slider_header_text" >
+                                                    <p class = "slider_header">3.Chita Cubs Playing</p>
+                                                    <p class = "slider_text">African chita cubs play in the grass in the
+                                                        Okavango Delta</p>
+                                                </span>
+                                                <span class = "glyphicon glyphicon-pause pause"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "row latest_news_box">
+                            <div class = "padleft padright col-md-1">
+                                <span class = "glyphicon glyphicon-time latest_news_icon"></span>
+                            </div>
+                            <div class = "col-md-3 padleft padright latest_news_title">Latest News
+                                <img src="images/border_search.png" class = "border_latest_news">
+                            </div>
+
+                            <div class = "col-md-3 padleft padright sort_menu">
+                                <div class="dropdown most_recent_title">
+                                    <button class="btn most_recent  dropdown-toggle"
+                                            type="button" id="dropdownMenu1"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                        Most Recent
+                                        <span class="glyphicon glyphicon-triangle-bottom caret_style"></span>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-left most_recent_ul" aria-labelledby="dropdownMenu1">
+                                        <li class = "most_recent_li"><a href="#">Most Viewd</a></li>
+                                        <li class = "most_recent_li"><a href="#">Most Recent</a></li>
+                                        <li class = "most_recent_li"><a href="#">Most Discussed</a></li>
+                                        <li class = "most_recent_li"><a href="#">Most Rated</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class = "col-md-1 col-md-offset-3 list_icon_box">
+                                <a href="#" class = "a_list">
+                                    <span class = "glyphicon glyphicon-list list_icon"></span>
+                                </a>
+                            </div>
+                            <div class = "col-md-1 grid_icon_box">
+                                <a href="#" class = "a_grid">
+                                    <span class = "glyphicon glyphicon-th grid_icon"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  Lion & Gorilla -->
+                <div class = "row  lion_gorilla">
+
+                    <!--  Lion  -->
+                    <div class = "lion col-md-6 news">
+                        <div class = "row">
+                            <div class = "col-md-12 pic_title_rate_time_vote">
+                                <div class = "row box_picture_news">
+                                    <div class = "col-md-12  pic">
+                                        <img class = "animal" src="images/lion.png">
+                                    </div>
+                                    <div class = "col-md-12 pic">
+                                        <div class = "row title_rate">
+                                            <div class = "col-md-6 title_news">African Lion Cub</div>
+                                            <div class = "col-md-6 rate_news">
+                                                <img src = "images/yell_star_full.png">
+                                                <img src = "images/yell_star_full.png">
+                                                <img src = "images/yell_star_full.png">
+                                                <img src = "images/yell_star_full.png">
+                                                <img src = "images/yell_star_empty.png">
+                                            </div>
+                                        </div>
+                                        <div class = "row time_vote">
+                                            <div class = "col-md-6 time_news">3 hours ago></div>
+                                            <div class = "col-md-6 rate_news">1,291 votes</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class = "col-md-12 text">An African lion cub rests in the tall grasses of
+                                Botswana's Okavango Delta. Once ranging across the African continent and into
+                                Syria, Israel, Iraq, Pakistan, Iran, and even northwest India, lions have
+                                declined to as few as 20,000 animals from about 450,000 iust 50 years ago.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--  Gorilla  -->
+                    <div class = "col-md-6 news">
+                        <div class = "row">
+                            <div class = "col-md-12 pic_title_rate_time_vote">
+                                <div class = "row box_picture_news">
+                                    <div class = "col-md-12 pic">
+                                        <img class = "animal" src="images/gorilla.png">
+                                    </div>
+                                    <div class = "col-md-12 pic">
+                                        <div class = "row title_rate">
+                                            <div class = "col-md-6 title_news">Young Mountain Gorilla</div>
+                                            <div class = "col-md-6 rate_news">
+                                                <img src = "images/yell_star_full.png">
+                                                <img src = "images/yell_star_full.png">
+                                                <img src = "images/yell_star_full.png">
+                                                <img src = "images/yell_star_empty.png">
+                                                <img src = "images/yell_star_empty.png">
+                                            </div>
+                                        </div>
+                                        <div class = "row time_vote">
+                                            <div class = "col-md-6 time_news">5 hours ago></div>
+                                            <div class = "col-md-6 rate_news">972 votes</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class = "col-md-12 text">This young mountain gorilla, named Kwibesha, is
+                                a member of the Kabrizi family of gorillas in Virunda National Park.
+                                 Wildlife rangers in the park have had to suspend their monitoring of the
+                                gorilas because rebel militias and the Congolese army occupy much of their
+                                habitat.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  Penguins & Shark -->
+                <div class = "row  penguins_shark">
+
+                    <!--  Penguins -->
+                    <div class = "penguins col-md-6 news">
+                        <div class = "row">
+                            <div class = "col-md-12 pic_title_rate_time_vote">
+                                <div class = "row box_picture_news">
+                                    <div class = "col-md-12 pic">
+                                        <img class = "animal" src="images/penguins.png">
+                                    </div>
+                                    <div class = "col-md-12 pic">
+                                        <div class = "row title_rate">
+                                            <div class = "col-md-6 title_news">KIng Penguins</div>
+                                            <div class = "col-md-6 rate_news">
+                                                <img src = "images/yell_star_full.png">
+                                                <img src = "images/yell_star_full.png">
+                                                <img src = "images/yell_star_empty.png">
+                                                <img src = "images/yell_star_empty.png">
+                                                <img src = "images/yell_star_empty.png">
+                                            </div>
+                                        </div>
+                                        <div class = "row time_vote">
+                                            <div class = "col-md-6 time_news">8 hours ago></div>
+                                            <div class = "col-md-6 rate_news">681 votes</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class = "col-md-12 text">King penguins live on the more temperate
+                                islands north of Antarctica. Although their habitat is warmer than
+                                that of emperor penguins, king penguins have four layers of feathers
+                                and huddle together for warmth.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Shark -->
+                    <div class = "col-md-6 news">
+                        <div class = "row">
+                            <div class = "col-md-12 pic_title_rate_time_vote">
+                                <div class = "row box_picture_news">
+                                    <div class = "col-md-12 pic">
+                                        <img class = "animal" src="images/shark.png">
+                                    </div>
+                                    <div class = "col-md-12 pic">
+                                        <div class = "row title_rate">
+                                            <div class = "col-md-6 title_news">Great White Shark</div>
+                                            <div class = "col-md-6 rate_news">
+                                                <img src = "images/yell_star_full.png">
+                                                <img src = "images/yell_star_full.png">
+                                                <img src = "images/yell_star_full.png">
+                                                <img src = "images/yell_star_full.png">
+                                                <img src = "images/yell_star_full.png">
+                                            </div>
+                                        </div>
+                                        <div class = "row time_vote">
+                                            <div class = "col-md-6 time_news">1 day ago></div>
+                                            <div class = "col-md-6 rate_news">2,827 votes</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class = "col-md-12 text">The legendary great white shark if far
+                                more fearsome in our imaginations than in reality. As scientific
+                                 research on this elusive predators increases, their image as
+                                mindless killing machines is beginning to fade.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- separator -->
+            <div class="col-md-1 padleft padright right_box_separator">
+                <img src="images/right_box_separator.png">
+            </div>
+
+            <!-- content right  box -->
+            <div class = "col-md-3">
+
+                <!-- most popular news box -->
+                <div class = "row">
+                    <div class = "most_popular_news col-md-12">
+                        <span class = "most_popular_news_star glyphicon glyphicon-star">
+                        </span>
+                        <span class = "most_popular_news_title">Most Popular News
+                        </span>
+                    </div>
+                </div>
+
+                <!-- snake box -->
+                <div class = "row">
+                    <div class = "col-md-12 snake_box">
+                        <div class = "row ">
+                            <div class = "col-dm-12">
+                                <img src="images/snake.jpg">
+                            </div>
+                        </div>
+                        <div class = "row">
+                            <div class = "col-dm-12 snake_title_rate">
+                                <span class = "snake_title">The Bite That Heals</span>
+                                <span class = "snake_rate">
+                                    <img src = "images/yell_star_full.png">
+                                    <img src = "images/yell_star_full.png">
+                                    <img src = "images/yell_star_full.png">
+                                    <img src = "images/yell_star_full.png">
+                                    <img src = "images/yell_star_full.png">
+                                </span>
+                            </div>
+                        </div>
+                        <div class = "row">
+                            <div class = "col-dm-12 snake_time_vote">
+                                <span class = "snake_time">6 days ago</span>
+                                <span class = "snake_vote">71,482 votes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- frog box -->
+                <div class = "row">
+                    <div class = "col-md-12 frog_box">
+                        <div class = "row">
+                            <div class = "col-dm-12">
+                                <img src="images/frog.jpg">
+                            </div>
+                        </div>
+                        <div class = "row">
+                            <div class = "col-dm-12 frog_title_rate">
+                                <span class = "frog_title">Stranger Than Nature</span>
+                                <span class = "frog_rate">
+                                    <img src = "images/yell_star_full.png">
+                                    <img src = "images/yell_star_full.png">
+                                    <img src = "images/yell_star_full.png">
+                                    <img src = "images/yell_star_full.png">
+                                    <img src = "images/yell_star_full.png">
+                                </span>
+                            </div>
+                        </div>
+                        <div class = "row">
+                            <div class = "col-dm-12 frog_time_vote">
+                                <span class = "frog_time">8 days ago</span>
+                                <span class = "frog_vote">64,159 votes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- most popular videos box -->
+                <div class = "row">
+                    <div class = "col-md-12 most_popular_videos">
+                        <span class = "most_popular_videos_icon glyphicon glyphicon-facetime-video">
+                        </span>
+                        <span class = "most_popular_videos_title">Most Popular Videos</span>
+                    </div>
+                </div>
+
+                <!-- bird boxes -->
+                <div class = "row">
+                    <div class = "col-md-12 padleft bird_box">
+                        <img src="images/bird.jpg">
+                    </div>
+                </div>
+                <div class = "row bird_title_views_play">
+                    <div class="col-md-9">
+                        <div class = "row">
+                            <div class = "col-md-12 bird_title">Most Rare Birds Ever</div>
+                        </div>
+                        <div class = "row">
+                            <div class = "col-md-12 bird_views">211,482 views</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 padright bird_pic_play">
+                        <button class = "bird_button" type = "submit">
+                            <span class = " bird_pic_play_icon glyphicon glyphicon-play-circle">
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- frog boxes -->
+                <div class = "row">
+                    <div class = "col-md-12 padleft fish_box">
+                        <img  src="images/fish.jpg">
+                    </div>
+                </div>
+                <div class = "row fish_title_views_play">
+                    <div class="col-md-9">
+                        <div class = "row">
+                            <div class = "col-md-12 fish_title">Mandarin Dragonet</div>
+                        </div>
+                        <div class = "row">
+                            <div class = "col-md-12 fish_views">192,029 views</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 padright fish_pic_play">
+                        <button class = "bird_button" type = "submit">
+                            <span class = " fish_pic_play_icon glyphicon glyphicon-play-circle">
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- upcoming events box -->
+                <div class = "row">
+                    <div class = "padleft padright col-md-12 upcoming_events">
+                        <span class = "upcoming_events_icon glyphicon glyphicon-calendar">
+                        </span>
+                        <span class = "upcoming_events_title">Upcoming Events</span>
+                        <button class = "bttn_upcoming_events" type="submit">
+                            <img src="images/next_arr.png">
+                        </button>
+                        <img class = "border_upcoming_events" src="images/border_search.png">
+                        <button class = "bttn_upcoming_events" type="submit">
+                            <img src="images/prev_arr.png">
+                        </button>
+                    </div>
+                </div>
+
+                <!-- natgeo live student matinees -->
+                <div class = "row natgeo_live">
+                    <div class = "col-md-12 natgeo_live_box">
+                        <div class = "row">
+                            <div class = "col-md-12 natgeo_live_title">NatGeo Live Students Matinees</div>
+                        </div>
+                        <div class = "row">
+                            <div class= "col-md-12 bar_after_natgeo_live"></div>
+                        </div>
+                        <div class = "row">
+                            <div class = "col-md-12">
+                                <img class = "natgeo_live_picture" src="images/speaker.png"></div>
+                        </div>
+                        <div class = "row">
+                            <div class = "col-md-12 natgeo_live_clock">
+                                <span class = "clock_icon glyphicon glyphicon-time"></span>
+                                <span class = "clock_text">April 17, 2013</span>
+                            </div>
+                        </div>
+                        <div class = "row">
+                            <div class = "col-md-12 padleft padright natgeo_live_text">Live Student Matinees
+                                offer students in USA and Canada entertaining and visually spectacular
+                                presentations by leading explorers
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- shopping & subscriptions boxes -->
+                <div class = "row">
+                    <div class = "col-md-5 padleft padright shopping">
+                        <span class = "shopping_icon glyphicon glyphicon-shopping-cart"></span>
+                        <img class = "border_shopping" src="images/border_search.png">
+                        <span class = "shopping_title">SHOPPING</span>
+                    </div>
+                    <div class = "col-md-7 padleft padright subscriptions">
+                        <span class = "subscriptions_icon glyphicon glyphicon-check"></span>
+                        <img class = "border_subscriptions" src="images/border_search.png">
+                        <span class = "subscriptions_title">SUBSCRIPTIONS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- separator before magazines bar -->
+
+        <div class = "row">
+            <div class= "col-md-12 bar_before_magazines"></div>
+        </div>
+
+        <!-- magazines bar -->
+
+        <div class = "row">
+            <div class = "padleft padright magazines col-md-12">
+                <img class = "icon_magazines" src="images/magazines.png">
+                <p class = "natgeomagazines">National Geographic Magazines</p>
+                <button class = "bttn_magazines" type="submit">
+                    <img src="images/next_arr.png">
+                </button>
+                <img class = "border_magazines" src="images/border_search.png">
+                <button class = "bttn_magazines" type="submit">
+                    <img src="images/prev_arr.png">
+                </button>
+            </div>
+        </div>
+
+        <!-- four magazines boxes  -->
+
+        <div class = "row magazines_box">
+
+            <!-- first magazine box -->
+            <div class = "padleft padright magazine_box col-md-3">
+                <div class = "magazine_picture">
+                    <img src = "images/magazin1.jpg">
+                    <p class = magazine_title>National Geographic Magazine</p>
+                </div>
+                <div class ="row padleft padright rate_subscribe">
+                    <div class = "rate_votes col-md-5">
+                        <div class = "row rate">
+                            <div class = "rate_1 col-md-12">
+                                <img src = "images/yell_star_full.png">
+                                <img src = "images/yell_star_full.png">
+                                <img src = "images/yell_star_full.png">
+                                <img src = "images/yell_star_full.png">
+                                <img src = "images/yell_star_full.png">
+                            </div>
+                        </div>
+                        <div class = "row vote">
+                            <div class = "vote_1 col-md-12">7,726 votes</div>
+                        </div>
+                    </div>
+                    <div class = "padleft padright subscribe col-md-6 col-md-offset-1">
+                        <button class = "bttn_subcribe" type="submit">
+                            <span class = "glyphicon glyphicon-plus-sign"></span>
+                        </button>
+                        <span class = "border_subscribe"><img src="images/border_search.png">
+                        </span>
+                          SUBSCRIBE
+                    </div>
+                </div>
+            </div>
+
+            <!-- second magazine box -->
+            <div class = " magazine_box magazine_box1 col-md-3">
+                <div class = "magazine_picture">
+                    <img src = "images/magazin2.jpg">
+                    <p class = magazine_title>National Geographic Kids Magazine</p>
+                </div>
+                <div class ="row padleft padright rate_subscribe">
+                    <div class = "rate_votes col-md-5">
+                        <div class = "row rate">
+                            <div class = "rate_1 col-md-12">
+                                <img src = "images/yell_star_full.png">
+                                <img src = "images/yell_star_full.png">
+                                <img src = "images/yell_star_full.png">
+                                <img src = "images/yell_star_full.png">
+                                <img src = "images/yell_star_empty.png">
+                            </div>
+                        </div>
+                        <div class = "row vote">
+                            <div class = "vote_1 col-md-12">5,841 votes</div>
+                        </div>
+                    </div>
+                    <div class = "padleft padright subscribe col-md-6 col-md-offset-1">
+                        <button class = "bttn_subcribe" type="submit">
+                            <span class = "glyphicon glyphicon-plus-sign"></span>
+                        </button>
+                        <span class = "border_subscribe"><img src="images/border_search.png">
+                        </span>
+                        SUBSCRIBE
+                    </div>
+                </div>
+            </div>
+
+            <!-- third magazine box -->
+            <div class = "padleft padright magazine_box magazine_box1 col-md-3">
+                <div class = "magazine_picture">
+                    <img src = "images/magazin3.jpg">
+                    <p class = magazine_title>NG Young Explorer Magazine</p>
+                </div>
+                <div class ="row padleft padright rate_subscribe">
+                    <div class = "rate_votes col-md-5">
+                        <div class = "row rate">
+                            <div class = "rate_1 col-md-12">
+                                <img src = "images/yell_star_full.png">
+                                <img src = "images/yell_star_full.png">
+                                <img src = "images/yell_star_full.png">
+                                <img src = "images/yell_star_full.png">
+                                <img src = "images/yell_star_full.png">
+                            </div>
+                        </div>
+                        <div class = "row vote">
+                            <div class = "vote_1 col-md-12">6,121 votes</div>
+                        </div>
+                    </div>
+                    <div class = "padleft padright subscribe col-md-6 col-md-offset-1">
+                        <button class = "bttn_subcribe" type="submit">
+                            <span class = "glyphicon glyphicon-plus-sign"></span>
+                        </button>
+                        <span class = "border_subscribe"><img src="images/border_search.png">
+                        </span>
+                        SUBSCRIBE
+                    </div>
+                </div>
+            </div>
+
+            <!-- forth magazine block -->
+            <div class = "padleft padright magazine_box magazine_box1 col-md-3">
+                <div class = "magazine_picture">
+                    <img src = "images/magazin4.jpg">
+                    <p class = magazine_title>National Geographic Little</p>
+                </div>
+                <div class ="row padleft padright rate_subscribe">
+                    <div class = "rate_votes col-md-5">
+                        <div class = "row rate">
+                            <div class = "rate_1 col-md-12">
+                                <img src = "images/yell_star_full.png">
+                                <img src = "images/yell_star_full.png">
+                                <img src = "images/yell_star_full.png">
+                                <img src = "images/yell_star_full.png">
+                                <img src = "images/yell_star_full.png">
+                            </div>
+                        </div>
+                        <div class = "row vote">
+                            <div class = "vote_1 col-md-12">9,107 votes</div>
+                        </div>
+                    </div>
+                    <div class = "padleft padright subscribe col-md-6 col-md-offset-1">
+                        <button class = "bttn_subcribe" type="submit">
+                            <span class = "glyphicon glyphicon-plus-sign"></span>
+                        </button>
+                        <span class = "border_subscribe"><img src="images/border_search.png">
+                        </span>
+                        SUBSCRIBE
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+
+        <div class = "row">
+            <div class = "col-md-12 padleft padright footer">
+                <div class = "row">
+                    <div class = "col-md-1 left_box"></div>
+                    <div class = "padleft padright email_box col-md-4">
+                        <form class="form-inline">
+                            <div class="form-group input_size">
+                                <label class="sr-only" for="InputEmail"></label>
+                                <input type="email" class="form-control email_style"
+                                       id="InputEmail" placeholder="type your email">
+                            </div>
+                            <button type="submit" class="btn email_subscribe">SUBSCRIBE</button>
+                        </form>
+                    </div>
+                    <div class = "col-md-1  padright">
+                        <img class = "social_nets" src = "images/facebook.png">
+                        <img class = "social_nets" src = "images/twitter.png">
+                        <img class = "social_nets" src = "images/youtube.png">
+                    </div>
+                    <div class = "col-md-5 customer_box">
+                        <div class = "row">
+                            <div class = "col-md=12">
+                                <ul class = "customer_ul list-inline pull-right">
+                                    <li>
+                                        <a  href = "#" class = "customer_service">
+                                            Customer Service
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a  href = "#" class = "advertise">
+                                               Advertise With US
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a  href = "#" class = "terms">
+                                                Terms of Service
+                                        </a>
+                                    <li>
+                                        <a  href = "#" class = "privacy">
+                                                Privacy Policy
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class = "row">
+                            <div class = "col-md=12 copyrigth">&copy1996-2013 National
+                                Geographic Society.All rights reserved
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "col-md-1 right_box"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
